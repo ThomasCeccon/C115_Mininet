@@ -46,14 +46,19 @@
 
 ## 3. Teste de Largura de Banda com Iperf
 
+- Comando iperf
+```sh
+      xterm h1 h2
+```
+
 - h1 servidor, TCP na porta 5555
 ```sh
-      h1 iperf -s -p 5555
+      iperf -s -p 5555
 ```
 
 - h2 cliente, TCP na porta 5555
 ```sh
-      iperf -c h2 -p 5555 -i 1 -t 10 -b 25M
+      iperf -c 10.0.0.1 -p 5555 -i 1 -t 10 -b 25M
 ```
 
 
